@@ -91,12 +91,12 @@ static void kscan_hhkb_pro2_work_handler(struct k_work *work)
     {
         for (int c = 0; c < MATRIX_COLS; ++c)
         {
-            gpio_pin_set(cfg->bits[0].port, cfg->bits[0].pin, r & BIT(0));
-            gpio_pin_set(cfg->bits[1].port, cfg->bits[1].pin, r & BIT(1));
-            gpio_pin_set(cfg->bits[2].port, cfg->bits[2].pin, r & BIT(2));
-            gpio_pin_set(cfg->bits[3].port, cfg->bits[3].pin, c & BIT(0));
-            gpio_pin_set(cfg->bits[4].port, cfg->bits[4].pin, c & BIT(1));
-            gpio_pin_set(cfg->bits[5].port, cfg->bits[5].pin, c & BIT(2));
+            gpio_pin_set(cfg->bits[0].port, cfg->bits[0].pin, 1 & BIT(0));
+            gpio_pin_set(cfg->bits[1].port, cfg->bits[1].pin, 1 & BIT(1));
+            gpio_pin_set(cfg->bits[2].port, cfg->bits[2].pin, 1 & BIT(2));
+            gpio_pin_set(cfg->bits[3].port, cfg->bits[3].pin, 1 & BIT(0));
+            gpio_pin_set(cfg->bits[4].port, cfg->bits[4].pin, 1 & BIT(1));
+            gpio_pin_set(cfg->bits[5].port, cfg->bits[5].pin, 1 & BIT(2));
 
             int cell = (r * MATRIX_COLS) + c;
             const bool prev = data->matrix_state[cell];
