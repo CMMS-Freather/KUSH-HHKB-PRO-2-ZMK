@@ -58,13 +58,6 @@
     status = "okay";
 };
 
-&power {
-    // 启用DCDC HV模式并设置3.3V
-    dcdc-enable = <1>;       // 启用DCDC
-    dcdc-hv-enable = <1>;    // 启用高压模式
-    reg-out0 = <4>;          // 4 = 3.3V (0=1.8V, 1=2.1V, 2=2.7V, 3=3.0V)
-};
-
 zephyr_udc0: &usbd {
     status = "okay";
     cdc_acm_uart: cdc_acm_uart {
