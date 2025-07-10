@@ -33,16 +33,16 @@
         #gpio-cells = <2>;
         gpio-map-mask = <0xffffffff 0xffffffc0>;
         gpio-map-pass-thru = <0 0x3f>;
-        gpio-map = <0 0 &gpio0 31 NRF_GPIO_DRIVE_S0H1>,
-                   <1 0 &gpio0 4 0>,
-                   <2 0 &gpio0 5 0>,
-                   <3 0 &gpio0 22 0>,
-                   <4 0 &gpio0 7 0>,
-                   <5 0 &gpio1 9 0>,
-                   <6 0 &gpio0 12 0>,
-                   <7 0 &gpio0 23 0>,
-                   <8 0 &gpio0 21 0>,
-                   <9 0 &gpio0 19 0>;
+        gpio-map = <0 0 &gpio1 6 NRF_GPIO_DRIVE_S0H1>,
+                   <1 0 &gpio1 4 0>,
+                   <2 0 &gpio1 2 0>,
+                   <3 0 &gpio1 0 0>,
+                   <4 0 &gpio0 24 0>,
+                   <5 0 &gpio0 22 0>,
+                   <6 0 &gpio0 20 0>,
+                   <7 0 &gpio0 17 0>,
+                   <8 0 &gpio0 8 0>,
+                   <9 0 &gpio0 6 0>;
     };
 };
 
