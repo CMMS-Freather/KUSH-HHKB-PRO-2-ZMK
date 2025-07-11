@@ -91,7 +91,7 @@ static void kscan_hhkb_pro2_work_handler(struct k_work *work)
     
     for (int r = 0; r < MATRIX_ROWS; ++r)
     {
-        for (int c = 0; b < MATRIX_COLS; ++c)
+        for (int c = 0; c < MATRIX_COLS; ++c)
         {
             gpio_pin_set(cfg->bits[0].port, cfg->bits[0].pin, r & BIT(0));
             gpio_pin_set(cfg->bits[1].port, cfg->bits[1].pin, r & BIT(1));
