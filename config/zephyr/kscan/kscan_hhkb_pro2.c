@@ -88,19 +88,17 @@ static void kscan_hhkb_pro2_work_handler(struct k_work *work)
     // The board needs some time to be operational after powering up
     k_sleep(K_MSEC(cfg->matrix_warm_up_ms));
 
-    int r = 1;
-    int c = 1;
- 
-    for (int a = 0; a < MATRIX_ROWS; ++a)
+    
+    for (int r = 0; r < MATRIX_ROWS; ++r)
     {
-        for (int b = 0; b < MATRIX_COLS; ++b)
+        for (int c = 0; b < MATRIX_COLS; ++c)
         {
-            gpio_pin_set(cfg->bits[0].port, cfg->bits[0].pin, a & BIT(0));
-            gpio_pin_set(cfg->bits[1].port, cfg->bits[1].pin, a & BIT(1));
-            gpio_pin_set(cfg->bits[2].port, cfg->bits[2].pin, a & BIT(2));
-            gpio_pin_set(cfg->bits[3].port, cfg->bits[3].pin, b & BIT(0));
-            gpio_pin_set(cfg->bits[4].port, cfg->bits[4].pin, b & BIT(1));
-            gpio_pin_set(cfg->bits[5].port, cfg->bits[5].pin, b & BIT(2));
+            gpio_pin_set(cfg->bits[0].port, cfg->bits[0].pin, r & BIT(0));
+            gpio_pin_set(cfg->bits[1].port, cfg->bits[1].pin, r & BIT(1));
+            gpio_pin_set(cfg->bits[2].port, cfg->bits[2].pin, r & BIT(2));
+            gpio_pin_set(cfg->bits[3].port, cfg->bits[3].pin, c & BIT(0));
+            gpio_pin_set(cfg->bits[4].port, cfg->bits[4].pin, c & BIT(1));
+            gpio_pin_set(cfg->bits[5].port, cfg->bits[5].pin, c & BIT(2));
 
             int cell = (r * MATRIX_COLS) + c;
             const bool prev = data->matrix_state[cell];
