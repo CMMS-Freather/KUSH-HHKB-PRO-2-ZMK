@@ -87,10 +87,13 @@ static void kscan_hhkb_pro2_work_handler(struct k_work *work)
     gpio_pin_set(cfg->power.port, cfg->power.pin, 1);
     // The board needs some time to be operational after powering up
     k_sleep(K_MSEC(cfg->matrix_warm_up_ms));
+
+    int r = 1;
+    int c = 1;
  
-    for (int r = 0; r < MATRIX_ROWS; ++r)
+    for (int a = 0; a < MATRIX_ROWS; ++a)
     {
-        for (int c = 0; c < MATRIX_COLS; ++c)
+        for (int b = 0; b < MATRIX_COLS; ++b)
         {
             gpio_pin_set(cfg->bits[0].port, cfg->bits[0].pin, 0 & BIT(0));
             gpio_pin_set(cfg->bits[1].port, cfg->bits[1].pin, 0 & BIT(1));
