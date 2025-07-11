@@ -7,14 +7,13 @@
 #include <zephyr/init.h>
 #include <hal/nrf_power.h>
 
+
 static int board_e73_pro2_nrf52840_init(void)
 {
-
 	/* if the nrf52840dongle_nrf52840 board is powered from USB
 	 * (high voltage mode), GPIO output voltage is set to 1.8 volts by
 	 * default and that is not enough to turn the green and blue LEDs on.
-	 * Increase GPIO voltage to 3.0 volts.
-	 */
+	 * Increase GPIO voltage to 3.3 volts. */
 	if ((nrf_power_mainregstatus_get(NRF_POWER) ==
 	     NRF_POWER_MAINREGSTATUS_HIGH) &&
 	    ((NRF_UICR->REGOUT0 & UICR_REGOUT0_VOUT_Msk) ==
