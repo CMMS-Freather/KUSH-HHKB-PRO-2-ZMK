@@ -17,15 +17,11 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zephyr,console = &cdc_acm_uart;
-        zmk,battery = &vbatt0;
+        zmk,battery = &vbatt;
     };
 
-    vbatt0: vbatt0 {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 1>; // P0.03
-        output-ohms = <2000000>;
-        full-ohms = <(1000000 + 2000000)>;
-        power-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>; // P0.02
+   vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
     };
 
     hhkb_pro2_connector: hhkb_pro2_connector {
@@ -88,7 +84,7 @@ zephyr_udc0: &usbd {
          * The flash starting at 0x000ec000 and ending at
          * 0x000f3fff is reserved for use by the application.
          */
-
+2
         /*
          * Storage partition will be used by FCB/LittleFS/NVS
          * if enabled.
