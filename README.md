@@ -22,7 +22,7 @@ Special thanks to Deepseek/ChatGPT for helping me understand better on the code
 
 ## Functionality
 Exactly the same as you expect on a bluetooth controller. Switching between wireless and wired, up to 5 profiles by default  
-SL2.1A Expansion chip allow wired connection to 3 more (2 external, 1 internal) USB Devices. Do not this is running USB2.0 Full Speed, so only connect it with non-power hungry USB Devices.  
+SL2.1A Expansion chip allow wired connection to 3 more (2 external, 1 internal) USB Devices. Do note this is running USB2.0 Full Speed, so only connect it with non-power hungry USB Devices.  
 Under wireless mode, the hub become disabled and will not work like Bluetooth-Hub. Only the keyboard part will function normally.   
 
 ## What is the difference from Kanru's firmware
