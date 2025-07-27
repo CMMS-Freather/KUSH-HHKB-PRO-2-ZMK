@@ -3,5 +3,3 @@ config SHIELD_HHKB_PRO2
     depends on KSCAN_HHKB_PRO2
 
     # No whitespace after the comma or in the keyboard name!
-config SHIELD_HHKB_PRO2_DONGLE
-    def_bool $(shields_list_contains,hhkb_pro2_dongle)
