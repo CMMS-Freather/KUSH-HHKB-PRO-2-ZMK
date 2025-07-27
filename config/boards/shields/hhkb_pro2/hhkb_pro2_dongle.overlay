@@ -8,6 +8,7 @@
 
     hhkb_pro2_layout: hhkb_pro2_layout {
         compatible = "zmk,physical-layout";
+        transorm = <&default_transform>;
         display-name = "HHKB";
 
         keys  //                     w   h    x    y     rot    rx    ry
