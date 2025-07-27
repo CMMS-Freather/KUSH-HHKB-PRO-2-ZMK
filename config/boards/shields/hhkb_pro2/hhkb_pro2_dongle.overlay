@@ -1,14 +1,14 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #import "hhkb_pro2-layout.dtsi"
 
-&physical_layout0 {
+&physical_layout {
     transorm = <&default_transform>;
 }
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;
+        zmk,physical-layout = &physical_layout;
     };
 
     mock_kscan: mock_kscan_0 {
