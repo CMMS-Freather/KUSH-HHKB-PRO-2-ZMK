@@ -18,10 +18,10 @@ include:
   # Your other keyboard parts here
   # -----------------------------------------
   # Change the board appropriately, you can use any board
-  - board: nice_nano_v2
-    shield: hhkb_pro2
-  - board: nice_nano_v2
-    shield: settings_reset
+  #- board: nice_nano_v2
+   # shield: hhkb_pro2
+  #- board: nice_nano_v2
+   # shield: settings_reset
   # Add these cmake-args to the peripherals you wish to use with the dongle
   - board: e73_pro2
     shield: hhkb_pro2
